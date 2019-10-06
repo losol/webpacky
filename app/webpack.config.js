@@ -5,14 +5,14 @@ module.exports = {
   entry: './app.js',
   output: {
     filename: 'app.js',
-    path: path.resolve(__dirname, '../dist')
+    path: path.resolve(__dirname, '../wwwroot/assets/js')
   },
   plugins: [
     new MiniCssExtractPlugin({
       // Options similar to the same options in webpackOptions.output
       // all options are optional
-      filename: '[name].css',
-      chunkFilename: '[id].css',
+      filename: '../css/[name].css',
+      chunkFilename: '../css/[id].css',
       ignoreOrder: false, // Enable to remove warnings about conflicting order
     }),
   ],
